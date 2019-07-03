@@ -1,4 +1,4 @@
-import copy
+# sudoku.py
 from helpers import filled, nicelyInPuzzle
 
 

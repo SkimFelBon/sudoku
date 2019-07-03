@@ -1,6 +1,6 @@
 import copy
-from helpers import filled, nicelyRow, nicelyColumn
-from helpers import findQuadrant, nicelyQuadrant, nicelyInPuzzle
+from helpers import filled, nicelyInPuzzle
+
 
 puzzle = [[5,3,0,0,7,0,0,0,0],
           [6,0,0,1,9,5,0,0,0],

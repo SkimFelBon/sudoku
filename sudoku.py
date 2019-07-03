@@ -48,11 +48,3 @@ if result:
         print(puzzle[j])
 else:
     print("Failed to find solution")
-
-""" Print Result
-print()
-for j in range(len(newTable)):
-    print(newTable[j])
-print()
-"""
-# my mistake, I'm creating nine new lists always with same number n=1.

@@ -1,3 +1,5 @@
+# helpers.py
+
 quadrant = [[0, 1, 2, 9, 10, 11, 18, 19, 20],
             [3, 4, 5, 12, 13, 14, 21, 22, 23],
             [6, 7, 8, 15, 16, 17, 24, 25, 26],
@@ -8,24 +10,7 @@ quadrant = [[0, 1, 2, 9, 10, 11, 18, 19, 20],
             [57, 58, 59, 66, 67, 68, 75, 76, 77],
             [60, 61, 62, 69, 70, 71, 78, 79, 80]]
 
-"""
-puzzle =[[5,0,7],
-         [6,0,1],
-         [0,9,8]]
-"""
-"""
-puzzle = [[5,3,0,0,7,0,0,0,0],
-          [6,0,0,1,9,5,0,0,0],
-          [0,9,8,0,0,0,0,6,0],
-          [8,0,0,0,6,0,0,0,3],
-          [4,0,0,8,0,3,0,0,1],
-          [7,0,0,0,2,0,0,0,6],
-          [0,6,0,0,0,0,2,8,0],
-          [0,0,0,4,1,9,0,0,5],
-          [0,0,0,0,8,0,0,7,9]]
-"""
-
-## TODO: write function to check if table filled
+## DONE: write function to check if table filled
 def filled(pyzzle):
     for i in range(len(pyzzle)):
         for j in range(len(pyzzle)):
@@ -63,10 +48,6 @@ def nicelyRow(pyzzle, n, i, j):
         if pyzzle[i][j] == n:
             return False
     return True
-
-#def nicelyQuadrant(pyzzle, n, i, j):
-#    box = findQuadrant(i, j, quadrant)
-#    return checkNumber(pyzzle, box, n)
 
 def nicelyInPuzzle(pyzzle, n, i, j):
     if nicelyQuadrant(pyzzle, n, i, j) == False:

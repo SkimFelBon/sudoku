@@ -1,6 +1,9 @@
 # sudoku.py
 from helpers import filled, nicelyInPuzzle
-
+import time
+from termcolor import colored
+import colorama
+colorama.init()
 
 puzzle = [[5,3,0,0,7,0,0,0,0],
           [6,0,0,1,9,5,0,0,0],
@@ -25,7 +28,21 @@ puzzle = [[5,3,0,0,7,0,0,0,0],
   [3,4,5,2,8,6,1,7,9]]
 """
 
+def colorize(table):
+    for x in range(len(table)):
+        for y in range(len(table[x])):
+            if table[x][y] != 0:
+                print(colored(table[x][y], "green"), end=" ")
+            else:
+                print(colored(table[x][y], "red"), end=" ")
+        print()
+    return
+
 def filltable(table):
+    time.sleep(0.01)
+    print()
+    colorize(table)
+    print()
     if filled(table) is True:
         return True
     for i in range(len(table)):
@@ -42,9 +59,11 @@ def filltable(table):
                     table[i][j] = 0
             return False
 
-result = filltable(puzzle)
-if result:
-    for j in range(len(puzzle)):
-        print(puzzle[j])
-else:
-    print("Failed to find solution")
+if __name__ == "__main__":
+    result = filltable(puzzle)
+    """ Print Result """
+    if result:
+        for j in range(len(puzzle)):
+            print(puzzle[j])
+    else:
+        print("Failed to find solution")
